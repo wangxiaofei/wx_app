@@ -1,0 +1,39 @@
+.grid tbody td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+.sort-asc {
+    background: url('img/up.png') center center no-repeat;
+    padding: 0 6px;
+}
+
+.sort-desc {
+    background: url('img/down.png') center center no-repeat;
+    padding: 0 6px;
+}
+
+.sort-default {
+    background: url('img/sort.png') center center no-repeat;
+    padding: 0 6px;
+}
+
+.grid .mouseout-odd {
+    background:#fff;
+}
+
+.grid .mouseout {
+     background:#f8f8f8;
+}
+
+.grid .mouseover {
+    background:#ebf7fe;
+}
+.grid .bt{
+    cursor:pointer;
+}

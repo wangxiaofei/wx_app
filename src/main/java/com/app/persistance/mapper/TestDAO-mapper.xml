@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.app.persistance.TestDAO">
+
+	<sql id="paged">
+		<if test="firstResult !=null">
+			<if test="maxResult !=null">
+				limit #{firstResult},#{maxResult}
+			</if>
+		</if>
+	</sql>
+
+	<insert id="create" useGeneratedKeys="true" >
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO Test
+		(name)
+		values(#{name})
+	</insert>
+	<insert id="createList" keyProperty="id">
+		INSERT INTO Test
+		(name)
+		values
+		<foreach collection="list" index="index" item="item"
+			separator=",">
+		<![CDATA[  
+		(#{item.name})
+		]]>
+		</foreach>
+	</insert>
+
+	<insert id="saveArray" keyProperty="userId">
+		INSERT INTO Test
+		(name)
+		values
+		<foreach collection="array" index="index" item="item"
+			separator=",">
+		<![CDATA[  
+		(#{item.name})
+		]]>
+		</foreach>
+	</insert>
+</mapper>

@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+.bar{
+    position:relative;
+    border:1px solid #a9cce0;
+    padding:1px;
+}
+.bar div{
+    display:block;
+    position:relative;
+    background:#85b4de;
+    color:#333333;
+    height:15px;
+    line-height:15px;
+}
+
+.bar div  span{
+    position:float;
+    text-align:center;
+    font-weight:bold;
+}
+
+.barProgress{
+    position:relative;
+    border:1px solid #a9cce0;
+    padding:1px;
+    width:175px;
+}
+.barProgress div{
+    display:block;
+    position:relative;
+    background:#85b4de;
+    color:#333333;
+    height:15px;
+    line-height:15px;
+}
+
+.barProgress div  span{
+    position:float;
+    text-align:center;
+    font-weight:bold;
+}

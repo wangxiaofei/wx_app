@@ -1,0 +1,70 @@
+.preClass_div{
+	float:left;
+	cursor: pointer;
+}
+.nextClass_div{
+	cursor: pointer;
+	right:0;
+	position:relative;
+	vertical-align:top;
+	float: right;
+}
+.spanClass{
+	
+}
+.spanClassR{
+
+}
+.clickLight{
+	background:url(pic/click_bj.png) repeat-x left top;
+	padding:0 10px;
+	color:#fff;
+}
+.liClass{
+	cursor:pointer;
+}
+.timeline {
+    padding: 0px;
+    margin: 0px;
+    color: #5a5a5a;
+    font-size: 8pt;
+	background:url(pic/timeline_bj.png) repeat-x left top;
+	height:40px;
+}
+.timeline img{
+    padding:0;
+}
+.timeline_bottom {
+    display: block;
+}
+
+.timeline_bottom ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline_bottom li {
+    float: left;
+    padding: 0px 2px 0px 10px;
+	width:80px;
+	_line-height:20px;
+	line-height:22px !important;
+	
+}
+
+
+.timeline_bottom li {
+   
+}
+
+.timeline_bottom li div {
+    text-transform: uppercase;
+    text-align: center;
+    width: 80px;
+}
+
+
+.timeline_bottom div {
+    padding: 5px 0px 3px 0px !important;
+}

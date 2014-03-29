@@ -1,0 +1,39 @@
+#regionDiv{
+    margin:-200px 0 0 -360px; 
+    border: 0px solid #000000;
+    overflow:auto;
+    /*width: 643px;*/
+    /*height: 396px;*/  
+    padding: 12px;
+    position:absolute;
+	top:50%;
+	left:50%;
+    text-align: center;
+	background-color:#C0E0EF;
+	display:none;
+	z-index:500;
+    /*border: 3px solid #ffffff;*/
+    /*background-image: url(back_test.jpg);
+    background-repeat: no-repeat;*/
+}
+#regionDiv a{
+	color:#15428b;
+}
+.errorMessage{
+	font-size:12px;
+	font-weight:normal;
+	color:#FF7200;
+}
+
+#bgDiv{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	background-color:#8EC0E3;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+	-moz-opacity:0.4;
+	-khtml-opacity: 0.4;
+	display:none;
+}

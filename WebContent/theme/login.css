@@ -1,0 +1,218 @@
+* {
+	margin:0;
+	padding:0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Verdana" , "Arial", "Helvetica", "微软雅黑", sans-serif;
+	font-size:12px;
+	color:#5d5d5d;
+	line-height:19px;
+}
+
+a{
+    text-decoration:none;
+	color:#ccc;
+	
+}
+a:hover{
+	text-decoration:underline;
+	color:#36a8c1;
+}
+img{
+	border: none;
+}
+html, body, .wrap {
+	height: 100%;
+}
+body > .wrap {
+	height: auto; 
+	min-height: 100%;
+}
+.wrap{
+	height: auto; 
+	min-height: 100%;
+}
+.main {
+	padding-bottom: 42px;
+	}
+.clearfix:after {
+	 content: ".";
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix { 
+    height: 1%;}
+.clearfix {
+    display: block;}
+/* End hide from IE-mac */
+
+.head{
+    height:205px;
+	width:100%;
+	background:url(pic/login_bj.png) repeat-x top ;
+	text-align:right;
+	top:0;
+	margin:0;
+	padding:0;
+}
+.logo{
+    height:205px;
+	width:337px;
+	background:url(pic/login_logo.png) no-repeat top;
+	margin:0 auto;
+}
+.content{
+    margin:0 auto;
+	padding:150px 0;
+	text-align:center;
+	width:600px !important;
+	_width:610px;
+	display:block;
+}
+.content li{
+    float:left;
+	display:block;
+	text-align:left;
+	width:234px;
+	list-style:none;	
+    
+}
+.content li.btWidth{
+    width:101px;
+	padding:0 0 0 7px;
+}
+.content li.loginVc{
+	color:#ccc;
+	float:left;
+	margin:5px 0 0 240px;
+	text-align:right;
+}
+.content li.loginVc a{
+	border:none;
+} 
+.content li.loginVc img{
+	padding:2px;
+	cursor: pointer;
+	vertical-align:bottom
+}
+.search_kw{
+    height:20px;
+    line-height:20px; 
+    border:1px solid #e0e0e0;
+	color:#ccc;
+
+}
+.content li.loginPw{
+	color:#ccc;
+	width:100px;
+	float:right;
+	margin:28px 25px 0 0;
+	text-align:right;
+}
+.content li.forgotPw{
+	float:right;
+	color:#ccc;
+	width:185px;
+	height:20px;
+	/*background:url(pic/login_pw.png) no-repeat left;*/
+	display:inline;
+	vertical-align:middle;
+	padding-left:20px;
+	margin-top:10px !important;
+	_margin-top:0;
+}
+.content li.validation{
+	float:left;
+	color:#ff7200;
+	display:inline;
+	padding:0 0 0 10px;
+	width:300px;
+}
+
+input.checkbox {
+	border:none;
+	height:auto;
+	background:transparent;
+	margin:0px 4px 0 0 !important;
+	margin:0;
+	top:0;
+}
+
+input.text{
+    background:url(pic/login_text.png) no-repeat;
+	width:227px;
+	height:35px;
+	padding:0 15px !important;
+	_padding:12px 0 0 15px;
+	text-align:left;
+	border:0;
+	color:#b4b4b4;
+	font-size:14px;
+	line-height:35px;
+	
+}
+input.textHover{
+    background:url(pic/login_textHover.png) no-repeat;
+	width:227px;
+	height:35px;
+	padding:0 15px !important;
+	_padding:12px 0 0 15px;
+	text-align:left;
+	border:0;
+	color:#5c5c5c;
+	font-size:14px;
+	line-height:35px;
+	
+}
+input.btn{
+	background:url(pic/login_bt.png) no-repeat;
+	height:35px;
+	width:101px; 
+	border:none;
+	color:#FFF;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom:3px;
+	cursor:pointer;
+	
+}
+
+
+
+.foot{
+    text-align:center;
+    color:#fff;
+	background:url(pic/foot_bj.png) repeat-x top;
+	width:100%;
+	height:50px;
+	text-align:center;
+    margin-top: -50px; /* footer高度的负值 */
+    position: relative;
+    clear:both;
+	vertical-align:middle;
+}
+.foot a{
+    color:#fff;
+	font-weight:bold;
+	font-size:10px;
+}
+.foot a:hover{
+	text-decoration:underline;
+	
+}
+.fontCopy{
+    font-size:10px;
+	color:#fff;
+}
+.mzLogo{
+	float:left;
+}
+.fontContent{
+	padding-top:10px;
+	color:#fff;
+}
