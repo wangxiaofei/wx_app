@@ -1,6 +1,5 @@
 package com.app.business.Impl;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
@@ -42,7 +41,7 @@ public class WeChatServiceImpl implements WeChatService {
 		if (msgType_receive.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
 			content_send = "你一直说"+content_receive+"\n你这么傻缺你家人造吗？";
 			TextMessage receive = new TextMessage();
-			receive.setCreateTime(new Date(Long.valueOf(createTime_receive)));
+			receive.setCreateTime(new Date());
 			receive.setFromUserName(from_receive);
 			receive.setIsDeleted(0);
 			receive.setMsgId(Long.valueOf(msgId_receive));
@@ -62,10 +61,10 @@ public class WeChatServiceImpl implements WeChatService {
 
 		TextMessage send = new TextMessage();
 		send.setCreateTime(new Date());
-		send.setFromUserName(from_receive);
+		send.setFromUserName(to_receive);
 		send.setIsDeleted(0);
 		send.setMsgId(Long.valueOf(msgId_receive));
-		send.setToUserName(to_receive);
+		send.setToUserName(from_receive);
 		send.setType(1);
 		send.setContent(content_send);
 		tmDao.save(send);
