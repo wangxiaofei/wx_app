@@ -46,5 +46,8 @@ public class Test {
 		// nm.setArticles(articles );
 		// String xml = MessageUtil.newsMessageToXml(nm);
 		// System.out.println(xml);
+		
+		System.out.println(new Date().getTime());
+		System.out.println(new Date(Long.valueOf("1396085149352")));
 	}
 }

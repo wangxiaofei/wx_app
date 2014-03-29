@@ -66,7 +66,7 @@ public class WeChatServiceImpl implements WeChatService {
 		send.setIsDeleted(0);
 		send.setMsgId(Long.valueOf(msgId_receive));
 		send.setToUserName(to_receive);
-		send.setType(0);
+		send.setType(1);
 		send.setContent(content_send);
 		tmDao.save(send);
 		return result;
