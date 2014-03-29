@@ -2,9 +2,8 @@
     <wb-module deploy-name="wx_app">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <property name="context-root" value="wx_app"/>
-        <property name="java-output-path" value="/wx_app/build/classes"/>
+        <property name="java-output-path" value="/wx_app/target/classes"/>
     </wb-module>
 </project-modules>
