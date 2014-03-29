@@ -2,14 +2,19 @@ package com.app.utils;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
+/**
+ * 	微信
+ *  请求校验工具
+ * @author wangx_000
+ *
+ */
+public class SignUtil {
 
-public class WeChatUtils {
-
-	public static boolean checkJoin(String signature, String timestamp, String nonce) {
+	public static boolean checkSignature(String signature, String timestamp, String nonce) {
 		String[] tmpArr = { Constant.WECHAT_TOKEN, timestamp, nonce };
 		Arrays.sort(tmpArr);
-		String tmpStr = WeChatUtils.ArrayToString(tmpArr);
-		tmpStr = WeChatUtils.SHA1Encode(tmpStr);
+		String tmpStr = ArrayToString(tmpArr);
+		tmpStr = SHA1Encode(tmpStr);
 		if (tmpStr.equalsIgnoreCase(signature)) {
 			return true;
 		} else {

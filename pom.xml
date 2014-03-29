@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<name>Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<org.springframework-version>4.0.1.RELEASE</org.springframework-version>
 		<org.mybatis-version>3.2.4</org.mybatis-version>
@@ -64,7 +64,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.5.10</version>
-		</dependency>		
+		</dependency>
 
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -103,7 +103,7 @@
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.3</version>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -180,6 +180,12 @@
 		</dependency>
 		
 		<dependency>
+			<groupId>xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-websocket</artifactId>
 			<version>8.0.0-RC5</version>
@@ -192,7 +198,7 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>wx_app</finalName>
 		<plugins>

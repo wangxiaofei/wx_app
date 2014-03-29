@@ -1,8 +1,8 @@
 package com.app.business;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface WeChatService {
 
-	String receiveText();
-	
-	void sendText(String content);
+	String processRequest(HttpServletRequest request)  throws Exception;
 }
