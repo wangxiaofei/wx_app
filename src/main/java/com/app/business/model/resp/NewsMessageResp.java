@@ -6,10 +6,10 @@ import java.util.List;
  * @author wangx_000
  *
  */
-public class NewsMessage extends BaseMessage{
+public class NewsMessageResp extends BaseMessageResp{
 
 	private String ArticleCount;
-	private List<Article> Articles;
+	private List<ArticleResp> ArticleResps;
 	
 	public String getArticleCount() {
 		return ArticleCount;
@@ -17,10 +17,10 @@ public class NewsMessage extends BaseMessage{
 	public void setArticleCount(String articleCount) {
 		ArticleCount = articleCount;
 	}
-	public List<Article> getArticles() {
-		return Articles;
+	public List<ArticleResp> getArticles() {
+		return ArticleResps;
 	}
-	public void setArticles(List<Article> articles) {
-		Articles = articles;
+	public void setArticles(List<ArticleResp> articleResps) {
+		ArticleResps = articleResps;
 	}
 }

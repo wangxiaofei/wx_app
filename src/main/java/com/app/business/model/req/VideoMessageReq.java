@@ -1,6 +1,6 @@
 package com.app.business.model.req;
 
-public class VideoMessage extends BaseMessage {
+public class VideoMessageReq extends BaseMessageReq {
 
 	private String MediaId;
 	private String ThumbMediaId;

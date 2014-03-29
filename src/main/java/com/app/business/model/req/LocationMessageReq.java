@@ -4,7 +4,7 @@ package com.app.business.model.req;
  * @author wangx_000
  *
  */
-public class LocationMessage extends BaseMessage {
+public class LocationMessageReq extends BaseMessageReq {
 
 	// 地理位置维度
 	private String Location_X;

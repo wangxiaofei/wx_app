@@ -5,7 +5,7 @@ package com.app.business.model.req;
  * 
  * @date 2013-05-19
  */
-public class BaseMessage {
+public class BaseMessageReq {
 	// 开发者微信号
 	private String ToUserName;
 	// 发送方帐号（一个OpenID）

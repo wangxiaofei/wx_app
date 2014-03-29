@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.app.business.model.resp.Article;
-import com.app.business.model.resp.Image;
-import com.app.business.model.resp.ImageMessage;
-import com.app.business.model.resp.NewsMessage;
+import com.app.business.model.resp.ArticleResp;
+import com.app.business.model.resp.ImageResp;
+import com.app.business.model.resp.ImageMessageResp;
+import com.app.business.model.resp.NewsMessageResp;
 import com.app.utils.MessageUtil;
 
 public class Test {

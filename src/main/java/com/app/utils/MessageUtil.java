@@ -12,13 +12,13 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import com.app.business.model.resp.Article;
-import com.app.business.model.resp.ImageMessage;
-import com.app.business.model.resp.MusicMessage;
-import com.app.business.model.resp.NewsMessage;
-import com.app.business.model.resp.TextMessage;
-import com.app.business.model.resp.VideoMessage;
-import com.app.business.model.resp.VoiceMessage;
+import com.app.business.model.resp.ArticleResp;
+import com.app.business.model.resp.ImageMessageResp;
+import com.app.business.model.resp.MusicMessageResp;
+import com.app.business.model.resp.NewsMessageResp;
+import com.app.business.model.resp.TextMessageResp;
+import com.app.business.model.resp.VideoMessageResp;
+import com.app.business.model.resp.VoiceMessageResp;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.core.util.QuickWriter;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
@@ -79,43 +79,43 @@ public class MessageUtil {
 	/**
 	 * 文本消息对象转换成xml
 	 * 
-	 * @param textMessage
+	 * @param textMessageResp
 	 * @return
 	 */
-	public static String textMessageToXml(TextMessage textMessage) {
-		xstream.alias("xml", textMessage.getClass());
-		return xstream.toXML(textMessage);
+	public static String textMessageToXml(TextMessageResp textMessageResp) {
+		xstream.alias("xml", textMessageResp.getClass());
+		return xstream.toXML(textMessageResp);
 	}
 
 	/**
 	 * 音乐消息对象转换xml
 	 * 
-	 * @param musicMessage
+	 * @param musicMessageResp
 	 * @return
 	 */
-	public static String musicMessageToXml(MusicMessage musicMessage) {
-		xstream.alias("xml", musicMessage.getClass());
-		return xstream.toXML(musicMessage);
+	public static String musicMessageToXml(MusicMessageResp musicMessageResp) {
+		xstream.alias("xml", musicMessageResp.getClass());
+		return xstream.toXML(musicMessageResp);
 	}
 
 	/**
 	 * 图片消息对象转换xml
-	 * @param imageMessage
+	 * @param imageMessageResp
 	 * @return
 	 */
-	public static String imageMessageToXml(ImageMessage imageMessage) {
-		xstream.alias("xml", imageMessage.getClass());
-		return xstream.toXML(imageMessage);
+	public static String imageMessageToXml(ImageMessageResp imageMessageResp) {
+		xstream.alias("xml", imageMessageResp.getClass());
+		return xstream.toXML(imageMessageResp);
 	}
 
 	/**
 	 * 声音消息对象转换xml
-	 * @param voiceMessage
+	 * @param voiceMessageResp
 	 * @return
 	 */
-	public static String voiceMessageToXml(VoiceMessage voiceMessage) {
-		xstream.alias("xml", voiceMessage.getClass());
-		return xstream.toXML(voiceMessage);
+	public static String voiceMessageToXml(VoiceMessageResp voiceMessageResp) {
+		xstream.alias("xml", voiceMessageResp.getClass());
+		return xstream.toXML(voiceMessageResp);
 	}
 
 	/**
@@ -123,20 +123,20 @@ public class MessageUtil {
 	 * @param mewsMessage
 	 * @return
 	 */
-	public static String newsMessageToXml(NewsMessage mewsMessage) {
+	public static String newsMessageToXml(NewsMessageResp mewsMessage) {
 		xstream.alias("xml", mewsMessage.getClass());
-		xstream.alias("item", new Article().getClass());  
+		xstream.alias("item", new ArticleResp().getClass());  
 		return xstream.toXML(mewsMessage);
 	}
 
 	/**
 	 * 视频消息对象转换xml
-	 * @param videoMessage
+	 * @param videoMessageResp
 	 * @return
 	 */
-	public static String videoMessageToXml(VideoMessage videoMessage) {
-		xstream.alias("xml", videoMessage.getClass());
-		return xstream.toXML(videoMessage);
+	public static String videoMessageToXml(VideoMessageResp videoMessageResp) {
+		xstream.alias("xml", videoMessageResp.getClass());
+		return xstream.toXML(videoMessageResp);
 	}
 
 	private static XStream xstream = new XStream(new XppDriver() {

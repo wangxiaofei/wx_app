@@ -1,6 +1,6 @@
 package com.app.business.model.resp;
 
-public class Image {
+public class VoiceResp {
 
 	private String MediaId;
 
@@ -11,5 +11,4 @@ public class Image {
 	public void setMediaId(String mediaId) {
 		MediaId = mediaId;
 	}
-	
 }

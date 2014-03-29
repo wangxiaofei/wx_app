@@ -5,7 +5,7 @@ package com.app.business.model.resp;
  * @author wangx_000
  * 
  */
-public class TextMessage extends BaseMessage {
+public class TextMessageResp extends BaseMessageResp {
 
 	private String Content;
 

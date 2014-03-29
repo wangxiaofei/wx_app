@@ -1,6 +1,6 @@
 package com.app.business.model.resp;
 
-public class Music {
+public class MusicResp {
 
 	private String Title;
 	private String Description;

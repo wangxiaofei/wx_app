@@ -11,8 +11,10 @@
 	</settings>
 	<typeAliases>
 		<typeAlias type="com.app.business.model.User" alias="User" />
+		<typeAlias type="com.app.business.model.TextMessage" alias="TextMessage" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="com/app/persistance/mapper/UserDAO-mapper.xml" />
+		<mapper resource="com/app/persistance/mapper/TextMessageDAO-mapper.xml" />
 	</mappers>
 </configuration>

@@ -2,7 +2,7 @@ package com.app.business.model.req;
 /**
  * 图片消息
  */
-public class ImageMessage extends BaseMessage{
+public class ImageMessageReq extends BaseMessageReq{
 
 	private String PicUrl;
 	private String MediaId;

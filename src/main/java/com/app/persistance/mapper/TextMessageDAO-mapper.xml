@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.app.persistance.TestDAO">
+
+	<sql id="paged">
+		<if test="firstResult !=null">
+			<if test="maxResult !=null">
+				limit #{firstResult},#{maxResult}
+			</if>
+		</if>
+	</sql>
+	<sql id="Table">
+		textmessage
+	</sql>
+	<sql id="BaseColumn">
+		id, fromusername, touser, createtime, msgid, content, type, isdeleted
+	</sql>
+	<resultMap type="com.app.business.model.TextMessage" id="TextMessage">
+		<result property="id" column="id" />
+		<result property="fromUserName" column="fromusername" />
+		<result property="toUserName" column="tousername" />
+		<result property="createTime" column="createtime" />
+		<result property="msgId" column="msgid" />
+		<result property="content" column="content" />
+		<result property="type" column="type" />
+		<result property="isDeleted" column="isdeleted" />
+	</resultMap>
+
+	<insert id="save" useGeneratedKeys="true">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO
+		<include refid="Table" />
+		(
+		<include refid="BaseColumn" />
+		)
+		values(null,#{content})
+	</insert>
+
+	<insert id="saveList" keyProperty="id">
+		INSERT INTO
+		<include refid="Table" />
+		(
+		<include refid="BaseColumn" />
+		)
+		values
+		<foreach collection="list" index="index" item="item"
+			separator=",">
+		<![CDATA[  
+		(null,#{item.name})
+		]]>
+		</foreach>
+	</insert>
+
+	<insert id="saveArray" keyProperty="id">
+		INSERT INTO
+		<include refid="Table" />
+		(
+		<include refid="BaseColumn" />
+		)
+		values
+		<foreach collection="array" index="index" item="item"
+			separator=",">
+		<![CDATA[  
+		(null,#{item.name})
+		]]>
+		</foreach>
+	</insert>
+</mapper>

@@ -4,7 +4,7 @@ package com.app.business.model.req;
  * @author wangx_000
  *
  */
-public class VoiceMessage extends BaseMessage {
+public class VoiceMessageReq extends BaseMessageReq {
 
 	//媒体ID
 	private String MediaId;

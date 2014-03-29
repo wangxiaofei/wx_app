@@ -5,7 +5,7 @@ package com.app.business.model.resp;
  * 
  * @date 2013-05-19
  */
-public class BaseMessage {
+public class BaseMessageResp {
 	// 接收方帐号（收到的OpenID）
 	private String ToUserName;
 	// 开发者微信号
