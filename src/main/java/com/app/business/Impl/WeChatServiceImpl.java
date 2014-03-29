@@ -1,5 +1,6 @@
 package com.app.business.Impl;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
@@ -22,39 +23,52 @@ public class WeChatServiceImpl implements WeChatService {
 
 	@Override
 	public String processRequest(HttpServletRequest request) throws Exception {
-		String content = "出错咯！！！！";
+
+		String content_send = "出错咯！！！！";
 		Map<String, String> map = MessageUtil.parseXml(request);
-		String from = map.get("FromUserName");
-		String to = map.get("ToUserName");
-		String createTime = map.get("CreateTime");
-		String msgType = map.get("MsgType");
-		String msgId = map.get("MsgId");
-		
-		TextMessage tmModel = new TextMessage();
-		tmModel.setCreateTime(Long.valueOf(createTime));
-		tmModel.setFromUserName(from);
-		tmModel.setIsDeleted(0);
-		tmModel.setMsgId(Long.valueOf(msgId));
-		tmModel.setToUserName(to);
-		tmModel.setType(0);
-		tmModel.setContent(content);
-		tmDao.save(tmModel);
-		
-		
+		String from_receive = map.get("FromUserName");
+		String to_receive = map.get("ToUserName");
+		String createTime_receive = map.get("CreateTime");
+		String msgType_receive = map.get("MsgType");
+		String msgId_receive = map.get("MsgId");
+		String content_receive = map.get("Content");
+
 		TextMessageResp tm = new TextMessageResp();
-		tm.setFromUserName(to);
-		tm.setToUserName(from);
+		tm.setFromUserName(to_receive);
+		tm.setToUserName(from_receive);
 		tm.setCreateTime(new Date().getTime());
 		tm.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
 
-		if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
-			content = "你能看到我吗？！你发的是文本信息";
+		if (msgType_receive.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
+			content_send = "你一直说"+content_receive+"\n你这么傻缺你家人造吗？";
+			TextMessage receive = new TextMessage();
+			receive.setCreateTime(new Date(Long.valueOf(createTime_receive)));
+			receive.setFromUserName(from_receive);
+			receive.setIsDeleted(0);
+			receive.setMsgId(Long.valueOf(msgId_receive));
+			receive.setToUserName(to_receive);
+			receive.setType(0);
+			receive.setContent(content_receive);
+			tmDao.save(receive);
 		}
-		if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {
-			content = "你能看到我吗？！你发的是图片信息";
+		if (msgType_receive.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {
+			
+			content_send = "图片碎了，请重发一次！！！";
 		}
-		tm.setContent(content);
+		tm.setContent(content_send);
 		String result = MessageUtil.textMessageToXml(tm);
+
+		
+
+		TextMessage send = new TextMessage();
+		send.setCreateTime(new Date());
+		send.setFromUserName(from_receive);
+		send.setIsDeleted(0);
+		send.setMsgId(Long.valueOf(msgId_receive));
+		send.setToUserName(to_receive);
+		send.setType(0);
+		send.setContent(content_send);
+		tmDao.save(send);
 		return result;
 	}
 

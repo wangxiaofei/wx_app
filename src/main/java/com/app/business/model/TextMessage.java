@@ -1,11 +1,13 @@
 package com.app.business.model;
 
+import java.util.Date;
+
 public class TextMessage {
 
 	private Long id;
 	private String fromUserName;
 	private String toUserName;
-	private Long createTime;
+	private Date createTime;
 	private Long msgId;
 	private Integer type;
 	private Integer isDeleted;
@@ -43,14 +45,6 @@ public class TextMessage {
 		this.toUserName = toUserName;
 	}
 
-	public Long getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Long createTime) {
-		this.createTime = createTime;
-	}
-
 	public Long getMsgId() {
 		return msgId;
 	}
@@ -73,6 +67,14 @@ public class TextMessage {
 
 	public void setIsDeleted(Integer isDeleted) {
 		this.isDeleted = isDeleted;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 }

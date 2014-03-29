@@ -2,8 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.app.persistance.TestDAO">
+<mapper namespace="com.app.persistance.TextMessageDAO">
 
+	<resultMap type="com.app.business.model.TextMessage" id="TextMessage">
+		<result property="id" column="id" />
+		<result property="fromUserName" column="fromusername" />
+		<result property="toUserName" column="tousername" />
+		<result property="createTime" column="createtime" />
+		<result property="msgId" column="msgid" />
+		<result property="content" column="content" />
+		<result property="type" column="type" />
+		<result property="isDeleted" column="isdeleted" />
+	</resultMap>
 	<sql id="paged">
 		<if test="firstResult !=null">
 			<if test="maxResult !=null">
@@ -15,18 +25,11 @@
 		textmessage
 	</sql>
 	<sql id="BaseColumn">
-		id, fromusername, touser, createtime, msgid, content, type, isdeleted
+		id, fromusername, tousername, createtime, msgid, content,
+		type,
+		isdeleted
 	</sql>
-	<resultMap type="com.app.business.model.TextMessage" id="TextMessage">
-		<result property="id" column="id" />
-		<result property="fromUserName" column="fromusername" />
-		<result property="toUserName" column="tousername" />
-		<result property="createTime" column="createtime" />
-		<result property="msgId" column="msgid" />
-		<result property="content" column="content" />
-		<result property="type" column="type" />
-		<result property="isDeleted" column="isdeleted" />
-	</resultMap>
+
 
 	<insert id="save" useGeneratedKeys="true">
 		<selectKey keyProperty="id" order="AFTER" resultType="long">
@@ -38,7 +41,7 @@
 		(
 		<include refid="BaseColumn" />
 		)
-		values(null,#{content})
+		values(null,#{fromUserName},#{toUserName},#{createTime},#{msgId},#{content},#{type},#{isDeleted})
 	</insert>
 
 	<insert id="saveList" keyProperty="id">
